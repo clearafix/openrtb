@@ -25,27 +25,25 @@ package com.clearafix.openrtb.model
   * @param ext
   */
 case class SeatBid(
-                  id:               List[Bid] = List(),
-                  impid:            String = "",
-                  price:            Float = 0,
-                  adid:             Option[String] = None,
-                  nurl:             Option[String] = None,
-                  adm:              Option[String] = None,
-                  adomain:          Option[List[String]] = None,
-                  bundle:           Option[String] = None,
-                  iurl:             Option[String] = None,
-                  cid:              Option[String] = None,
-                  crid:             Option[String] = None,
-                  cat:              Option[List[String]] = None,
-                  attr:             Option[List[Int]] = None,
-                  api:              Option[Int] = None,
-                  protocol:         Option[Int] = None,
-                  qagmediarating:   Option[Int] = None,
-                  dealid:           Option[String] = None,
-                  w:                Option[Int] = None,
-                  h:                Option[Int] = None,
-                  exp:              Option[Int] = None,
-                  ext:              Option[Ext] = None
+                    id: Seq[Bid] = Seq(),
+                    impid: String = "",
+                    price: Float = 0,
+                    adid: Option[String] = None,
+                    nurl: Option[String] = None,
+                    adm: Option[String] = None,
+                    adomain: Option[Seq[String]] = None,
+                    bundle: Option[String] = None,
+                    iurl: Option[String] = None,
+                    cid: Option[String] = None,
+                    crid: Option[String] = None,
+                    cat: Option[Seq[String]] = None,
+                    attr: Option[Seq[Int]] = None,
+                    api: Option[Int] = None,
+                    protocol: Option[Int] = None,
+                    qagmediarating: Option[Int] = None,
+                    dealid: Option[String] = None,
+                    w: Option[Int] = None,
+                    h: Option[Int] = None,
+                    exp: Option[Int] = None,
+                    ext: Option[Ext] = None
                   )
-{
-}

@@ -43,6 +43,7 @@ case class BidRequest(
                        source: Option[Source] = None,
                        regs: Option[Regs] = None,
                        ext: Option[Ext] = None
-                     ) {
+                     )
+{
   require(!id.isEmpty && !imp.isEmpty)
 }

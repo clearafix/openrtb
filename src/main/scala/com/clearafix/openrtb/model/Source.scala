@@ -1,5 +1,3 @@
 package com.clearafix.openrtb.model
 
-case class Source() {
-
-}
+case class Source()

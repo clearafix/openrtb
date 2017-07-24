@@ -12,7 +12,7 @@ package com.clearafix.openrtb.model
 case class Publisher(
                     id:     Option[String] = None,
                     name:   Option[String] = None,
-                    cat:    Option[List[String]] = None,
+                    cat:    Option[Seq[String]] = None,
                     domain: Option[String] = None,
                     ext:    Option[Ext] = None
                     ) {
