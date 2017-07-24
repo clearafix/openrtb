@@ -1,9 +1,11 @@
+package com.clearafix.openrtb.model
+
 /**
-  * Representation of in-stream video impression. Video in OpenRTB generally assumes compliance with the VAST standard.
-  * The presence of a Video as a subordinate of the Imp object indicates that this impression is offered as
+  * Representation of in-stream video impression. com.clearafix.openrtb.model.Video in OpenRTB generally assumes compliance with the VAST standard.
+  * The presence of a com.clearafix.openrtb.model.Video as a subordinate of the com.clearafix.openrtb.model.Imp object indicates that this impression is offered as
   * a video type impression.
   *
-  * @param mimes Content MIME types supported
+  * @param mimes com.clearafix.openrtb.model.Content MIME types supported
   * @param minduration Minimum video ad duration in seconds
   * @param maxduration Maximum video ad duration in seconds
   * @param protocols Array of supported video protocols. At least one supported protocol must be specified
@@ -32,9 +34,9 @@
   * @param delivery Supported delivery methods (e.g., streaming, progressive). If none specified,
   *                 assume all are supported
   * @param pos Ad position on screen.
-  * @param companionad list of Banner objects if companion ads are available
+  * @param companionad list of com.clearafix.openrtb.model.Banner objects if companion ads are available
   * @param api List of supported API frameworks for this impression
-  * @param companiontype Supported VAST companion ad types. Recommended if companion Banner objects
+  * @param companiontype Supported VAST companion ad types. Recommended if companion com.clearafix.openrtb.model.Banner objects
   *                      are included via the companionad
   * @param ext Placeholder for exchange-specific extensions to OpenRTB
   */

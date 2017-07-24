@@ -1,5 +1,7 @@
+package com.clearafix.openrtb.model
+
 /**
-  * BidRequest represents a request from the Exchange.
+  * com.clearafix.openrtb.model.BidRequest represents a request from the Exchange.
   *
   * @param id Unique ID of the bid request, provided by the exchange
   * @param imp Collection of impressions offered. At least 1 is required.

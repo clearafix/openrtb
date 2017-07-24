@@ -1,4 +1,4 @@
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize
+package com.clearafix.openrtb.model
 
 /**
   * Encapsulates various methods for specifying a geographic location.

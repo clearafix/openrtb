@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   *  Private marketplace container for direct deals between buyers and sellers that may pertain to this impression.
   *

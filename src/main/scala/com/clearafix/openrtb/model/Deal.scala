@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Represents a specific deal that was struck a priori between a buyer and a seller.
   *
@@ -22,5 +24,4 @@ case class Deal(
                wadomain:    Option[List[String]] = None,
                ext:         Option[Ext] = None
                )
-{
-}
+

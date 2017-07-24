@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Represents the most general type of impression. It can be many things including a simple static image,
   * an expandable ad unit, or even in-banner video.

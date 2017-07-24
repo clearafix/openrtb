@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Contains information known or derived about the human user of the device.
   * The user id is an exchange artifact and may be subject to rotation or other privacy policies .  However,

@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Contains additional data about the user.
   *

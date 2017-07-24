@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Describes the content in which the impression will appear.
   *

@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Representation of exchange-specific extensions.
   */

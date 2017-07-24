@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Legal, governmental, or industry regulations that apply to the request.
   *

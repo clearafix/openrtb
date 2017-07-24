@@ -1,7 +1,4 @@
-import com.fasterxml.jackson.annotation.JsonInclude
-import com.fasterxml.jackson.databind.{DeserializationFeature, ObjectMapper}
-import com.fasterxml.jackson.module.scala.DefaultScalaModule
-import com.fasterxml.jackson.module.scala.experimental.ScalaObjectMapper
+package com.clearafix.openrtb.model
 
 object BidRequestTransformer {
   val mapper = new ObjectMapper with ScalaObjectMapper

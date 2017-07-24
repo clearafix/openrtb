@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Represents the device through which the user is interacting with a content and where
   * the ad will be displayed.

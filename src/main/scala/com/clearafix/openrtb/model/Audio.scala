@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Representation of audio ad impression type. The presence of a Audio as a subordinate of the Imp object
   * indicates that this impression is offered as an audio type impression.
@@ -51,6 +53,3 @@ case class Audio(
                 dl:             Option[Int] = None,
                 ext:            Option[Ext] = None
                 )
-{
-
-}

@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Represent the publisher of the media in which the ad will be displayed.
   *

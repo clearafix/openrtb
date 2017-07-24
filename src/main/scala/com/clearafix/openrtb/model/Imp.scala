@@ -1,4 +1,4 @@
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize
+package com.clearafix.openrtb.model
 
 /**
   * Impression describes an ad placement or impression in the auction. Every impression must have an id.

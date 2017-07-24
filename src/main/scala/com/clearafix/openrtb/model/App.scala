@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Represents a non-browser application content supported by ad (typically mobile app).
   *
@@ -34,6 +36,3 @@ case class App(
               keywords:       Option[String] = None,
               ext:            Option[Ext] = None
               )
-{
-
-}

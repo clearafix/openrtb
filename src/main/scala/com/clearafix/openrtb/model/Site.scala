@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Represent a website. Used if ad supports website as a content. Must not be used in the request with
   * App object.

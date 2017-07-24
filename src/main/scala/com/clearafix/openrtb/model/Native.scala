@@ -1,3 +1,5 @@
+package com.clearafix.openrtb.model
+
 /**
   * Representation of native ad impression type. Native ad units are intended to blend seamlessly into the surrounding
   * content (e.g., a sponsored Twitter or Facebook post). As such, the response must be well-structured to afford
