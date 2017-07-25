@@ -10,9 +10,9 @@ package com.clearafix.openrtb.model
   * @param yob        Year of birth as a 4-digit integer
   * @param gender     Gender, where “M” = male, “F” = female, “O” = known to be other
   * @param keywords   Comma separated list of keywords, interests, or intent
-  * @param customdate Optional feature to pass bidder data that was set in the exchange’s cookie. The string must be in base85 cookie safe characters and be in any format.  Proper JSON encoding must be used to include “escaped” quotation marks.
-  * @param geo        Location of the user’s home base defined by a Geo object
-  * @param data       Additional user data.  Each Data object represents a different data source.
+  * @param customdata Optional feature to pass bidder data that was set in the exchange’s cookie. The string must be in base85 cookie safe characters and be in any format.  Proper JSON encoding must be used to include “escaped” quotation marks.
+  * @param geo        Location of the user’s home base defined by a {@link com.clearafix.openrtb.model.Geo Geo} object
+  * @param data       Additional user data.  Each {@link com.clearafix.openrtb.model.Data Data} object represents a different data source.
   * @param ext        Placeholder for exchange-specific extensions to OpenRTB
   */
 case class User(
@@ -21,8 +21,8 @@ case class User(
                  yob: Option[Int] = None,
                  gender: Option[String] = None,
                  keywords: Option[String] = None,
-                 customdate: Option[String] = None,
+                 customdata: Option[String] = None,
                  geo: Option[Geo] = None,
                  data: Option[Seq[Data]] = None,
-                 ext: Option[Ext] = None
+                 ext: Ext = None
                )

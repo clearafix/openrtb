@@ -15,14 +15,13 @@ package com.clearafix.openrtb.model
   * @param minbitrate    Minimum bit rate in Kbps
   * @param maxbitrate    Maximum bit rate in Kbps
   * @param delivery      Supported delivery methods (e.g., streaming, progressive). If none specified, assume all are supported
-  * @param companionad   list of Banner objects if companion ads are available
+  * @param companionad   list of {@link com.clearafix.openrtb.model.Banner Banner} objects if companion ads are available
   * @param api           array of supported API frameworks for this impression
   * @param companiontype Supported DAAST companion ad types. Recommended if companion Banner objects are included via the companionad list
   * @param maxseq        The maximum number of ads that can be played in an ad pod
   * @param feed          Type of audio feed
   * @param stitched      Indicates if the audio is stitched, where 0 = no, 1 = yes
   * @param nvol          Volume normalization mode
-  * @param dl            Indicates if the audio file can be downloaded by the user, where 0 = no, 1 = yes
   * @param ext           Placeholder for exchange-specific extensions to OpenRTB
   */
 case class Audio(
@@ -44,6 +43,8 @@ case class Audio(
                   feed: Option[Int] = None,
                   stitched: Option[Int] = None,
                   nvol: Option[Int] = None,
-                  dl: Option[Int] = None,
-                  ext: Option[Ext] = None
+                  ext: Ext = None
                 )
+{
+  require(!mimes.isEmpty)
+}

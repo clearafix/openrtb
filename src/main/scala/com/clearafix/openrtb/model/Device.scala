@@ -5,11 +5,9 @@ package com.clearafix.openrtb.model
   * the ad will be displayed.
   *
   * @param ua             Browser user agent string
-  * @param geo            Location of the device assumed to be the user’s current location defined by a Geo object
-  * @param dnt            Standard “Do Not Track” flag as set in the header by the browser,
-  *                       where 0 = tracking is unrestricted, 1 = do not track
-  * @param lmt            “Limit Ad Tracking” signal commercially endorsed (e.g., iOS, Android),
-  *                       where 0 = tracking is unrestricted, 1 = tracking must be limited per commercial guidelines
+  * @param geo            Location of the device assumed to be the user’s current location defined by a {@link com.clearafix.openrtb.model.Geo Geo} object
+  * @param dnt            Standard “Do Not Track” flag as set in the header by the browser, where 0 = tracking is unrestricted, 1 = do not track
+  * @param lmt            “Limit Ad Tracking” signal commercially endorsed (e.g., iOS, Android), where 0 = tracking is unrestricted, 1 = tracking must be limited per commercial guidelines
   * @param ip             IPv4 address closest to device
   * @param ipv6           IP address closest to device as IPv6
   * @param devicetype     The general type of device
@@ -23,11 +21,11 @@ package com.clearafix.openrtb.model
   * @param ppi            Screen size as pixels per linear inch
   * @param pxration       The ratio of physical pixels to device independent pixels
   * @param js             Support for JavaScript, where 0 = no, 1 = yes
-  * @param geofetch       Indicates if the geolocation API will be available to JavaScript code running in the banner,
-  *                       where 0 = no, 1 = yes
+  * @param geofetch       Indicates if the geolocation API will be available to JavaScript code running in the banner, where 0 = no, 1 = yes
   * @param flashver       Version of Flash supported by the browser
   * @param language       Browser language using ISO-639-1-alpha-2
   * @param carrier        Carrier or ISP
+  * @param mccmnc         carrier as the concatenated MCC-MNC code
   * @param connectiontype Network connection type
   * @param ifa            ID sanctioned for advertiser use in the clear
   * @param didsha1        Hardware device ID; hashed via SHA1
@@ -54,12 +52,13 @@ case class Device(
                    h: Option[Int] = None,
                    w: Option[Int] = None,
                    ppi: Option[Int] = None,
-                   pxration: Option[Float] = None,
+                   pxration: Option[Double] = None,
                    js: Option[Int] = None,
                    geofetch: Option[Int] = None,
                    flashver: Option[Int] = None,
                    language: Option[String] = None,
                    carrier: Option[String] = None,
+                   mccmnc: Option[String] = None,
                    connectiontype: Option[Int] = None,
                    ifa: Option[String] = None,
                    didsha1: Option[String] = None,
@@ -68,5 +67,5 @@ case class Device(
                    dpidmd5: Option[String] = None,
                    macsha1: Option[String] = None,
                    macmd5: Option[String] = None,
-                   ext: Option[Ext] = None
+                   ext: Ext = None
                  )

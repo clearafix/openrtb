@@ -12,12 +12,15 @@ package com.clearafix.openrtb.model
   * @param ext         Placeholder for exchange-specific extensions to OpenRTB
   */
 case class Deal(
-                 id: String = "",
-                 bidfloor: Option[Float] = None,
-                 bidfloorcur: Option[String] = None,
+                 id: String,
+                 bidfloor: Option[Double] = Some(0),
+                 bidfloorcur: Option[String] = Some("USD"),
                  at: Option[Int] = None,
                  wseat: Option[Seq[String]] = None,
                  wadomain: Option[Seq[String]] = None,
-                 ext: Option[Ext] = None
+                 ext: Ext = None
                )
+{
+  require(!id.isEmpty)
+}
 

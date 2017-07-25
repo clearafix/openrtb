@@ -5,7 +5,7 @@ package com.clearafix.openrtb.model
   *
   * @param lat           Latitude from 90.0 to +90.0, where negative is south
   * @param lon           Longitude from 180.0 to +180.0, where negative is wes
-  * @param typeSource    Source of location data; recommended when passing lat/lon
+  * @param `type`        Source of location data; recommended when passing lat/lon
   * @param accuracy      Estimated location accuracy in meters; recommended when lat/lon are specified and derived from a device’s location services (i.e., type = 1).  Note that this is the accuracy as reported from the device.  Consult OS specific documentation (e.g., Android, iOS) for exact interpretation.
   * @param lastfix       Number of seconds since this geolocation fix was established. Note that devices may cache location data across multiple fetches.  Ideally, this value should be from the time the actual fix was taken
   * @param ipservice     Service or provider used to determine geolocation from IP address if applicable (i.e., type = 2)
@@ -21,7 +21,7 @@ package com.clearafix.openrtb.model
 case class Geo(
                 lat: Option[Double] = None,
                 lon: Option[Double] = None,
-                typeSource: Option[Int] = None,
+                `type`: Option[Int] = None,
                 accuracy: Option[Int] = None,
                 lastfix: Option[Int] = None,
                 ipservice: Option[Int] = None,
@@ -32,5 +32,5 @@ case class Geo(
                 city: Option[String] = None,
                 zip: Option[String] = None,
                 utcoffset: Option[Int] = None,
-                ext: Option[Ext] = None
+                ext: Ext = None
               )

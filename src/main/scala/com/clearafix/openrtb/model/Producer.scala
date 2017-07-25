@@ -14,5 +14,5 @@ case class Producer(
                      name: Option[String] = None,
                      cat: Option[Seq[String]] = None,
                      domain: Option[String] = None,
-                     ext: Option[Ext] = None
+                     ext: Ext = None
                    )

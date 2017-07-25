@@ -4,7 +4,7 @@ package com.clearafix.openrtb.model
   * Representation of a bid response.
   *
   * @param id         ID of the bid request to which this is a response
-  * @param seatbid    list of seatbid objects
+  * @param seatbid    list of {@link com.clearafix.openrtb.model.SeatBid SeatBid} objects
   * @param bidid      Bidder generated response ID to assist with logging/tracking
   * @param cur        Bid currency using ISO-4217 alpha codes
   * @param customdata Optional feature to allow a bidder to set data in the exchange’s cookie. The string must be in base85 cookie safe characters and be in any format. Proper JSON encoding must be used to include “escaped” quotation marks
@@ -12,11 +12,14 @@ package com.clearafix.openrtb.model
   * @param ext        Placeholder for bidder-specific extensions to OpenRTB
   */
 case class BidResponse(
-                        id: String = "",
+                        id: String,
                         seatbid: Option[Seq[SeatBid]] = None,
                         bidid: Option[String] = None,
-                        cur: Option[String] = None,
+                        cur: Option[String] = Some("USD"),
                         customdata: Option[String] = None,
                         nbr: Option[Int] = None,
-                        ext: Option[Ext] = None
+                        ext: Ext = None
                       )
+{
+  require(!id.isEmpty)
+}

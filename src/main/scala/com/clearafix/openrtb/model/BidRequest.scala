@@ -42,7 +42,7 @@ case class BidRequest(
                        bapp: Option[Seq[String]] = None,
                        source: Option[Source] = None,
                        regs: Option[Regs] = None,
-                       ext: Option[Ext] = None
+                       ext: Ext = None
                      )
 {
   require(!id.isEmpty && !imp.isEmpty)

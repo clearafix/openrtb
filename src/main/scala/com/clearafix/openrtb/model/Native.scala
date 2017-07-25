@@ -12,9 +12,13 @@ package com.clearafix.openrtb.model
   * @param ext     Placeholder for exchange-specific extensions to OpenRTB
   */
 case class Native(
-                   request: String = "",
+                   request: String,
                    ver: Option[String] = None,
                    api: Option[Seq[Int]] = None,
                    battr: Option[Seq[Int]] = None,
-                   ext: Option[Ext] = None
+                   ext: Ext = None
                  )
+
+{
+  require(!request.isEmpty)
+}

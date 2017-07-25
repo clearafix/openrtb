@@ -15,8 +15,8 @@ package com.clearafix.openrtb.model
   * @param search        Search string that caused navigation to the current page
   * @param mobile        Indicates if the site has been programmed to optimize layout when viewed on mobile devices, where 0 = no, 1 = yes
   * @param privacypolicy Indicates if the site has a privacy policy, where 0 = no, 1 = yes
-  * @param publisher     Details about the Publisher of the site
-  * @param content       Details about the Content of the site
+  * @param publisher     Details about the {@link com.clearafix.openrtb.model.Publisher Publisher} of the site
+  * @param content       Details about the {@link com.clearafix.openrtb.model.Content Content} of the site
   * @param keywords      Comma separated list of keywords about the site
   * @param ext           Placeholder for exchange-specific extensions to OpenRTB
   */
@@ -35,5 +35,5 @@ case class Site(
                  publisher: Option[Publisher] = None,
                  content: Option[Content] = None,
                  keywords: Option[String] = None,
-                 ext: Option[Ext] = None
+                 ext: Ext = None
                )

@@ -12,7 +12,7 @@ package com.clearafix.openrtb.model
   * @param genre    Genre that best describes the content
   * @param album    Album to which the content belongs; typically for audio
   * @param isrc     International Standard Recording Code conforming to ISO-3901
-  * @param producer Details about the content Producer
+  * @param producer Details about the content {@link com.clearafix.openrtb.model.Producer Producer}
   * @param url      URL of the content, for buy-side contextualization or review
   * @param cat      list of IAB content categories that describe the content producer
   * @param prodq    Production quality
@@ -56,5 +56,5 @@ case class Content(
                     language: Option[String] = None,
                     embeddable: Option[Int] = None,
                     data: Option[Seq[Data]] = None,
-                    ext: Option[Ext] = None
+                    ext: Ext = None
                   )

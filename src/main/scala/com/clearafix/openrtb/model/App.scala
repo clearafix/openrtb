@@ -14,8 +14,8 @@ package com.clearafix.openrtb.model
   * @param ver           version of the app
   * @param privacypolicy Indicates if the app has a privacy policy, where 0 = no, 1 = yes
   * @param paid          0 = app is free, 1 = the app is a paid version
-  * @param publisher     Details about the Publisher of the app
-  * @param content       Details about the Content of the app
+  * @param publisher     Details about the {@link com.clearafix.openrtb.model.Publisher Publisher} of the app
+  * @param content       Details about the {@link com.clearafix.openrtb.model.Content Content} of the app
   * @param keywords      Comma separated list of keywords about the app
   * @param ext           Placeholder for exchange-specific extensions to OpenRTB
   */
@@ -34,5 +34,5 @@ case class App(
                 publisher: Option[Publisher] = None,
                 content: Option[Content] = None,
                 keywords: Option[String] = None,
-                ext: Option[Ext] = None
+                ext: Ext = None
               )

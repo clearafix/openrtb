@@ -3,7 +3,8 @@ package com.clearafix.openrtb.model
 /**
   * Impression describes an ad placement or impression in the auction. Every impression must have an id.
   *
-  * @param id                unique within a context of bid request
+  * @param id                required unique identifier within a context of bid request
+  * @param metric            array of {@link com.clearafix.openrtb.model.Metric metrics}
   * @param banner            required if this impression represents a banner ad
   * @param video             required if this impression represents a video ad
   * @param audio             required if this impression represents an audio ad
@@ -22,7 +23,8 @@ package com.clearafix.openrtb.model
   * @param ext               Placeholder for exchange-specific extensions to OpenRTB
   */
 case class Imp(
-                id: String = "",
+                id: String,
+                metric: Option[Seq[Metric]],
                 banner: Option[Banner] = None,
                 video: Option[Video] = None,
                 audio: Option[Audio] = None,
@@ -30,14 +32,16 @@ case class Imp(
                 pmp: Option[Pmp] = None,
                 displaymanager: Option[String] = None,
                 displaymanagerver: Option[String] = None,
-                instl: Option[Int] = None,
+                instl: Option[Int] = Some(0),
                 tagid: Option[String] = None,
-                contentAs: Option[Float] = None,
-                bidfloor: Option[Float] = None,
-                bidfloorcur: Option[String] = None,
+                bidfloor: Option[Double] = Some(0),
+                bidfloorcur: Option[String] = Some("USD"),
                 clickbrowser: Option[Int] = None,
                 secure: Option[Int] = None,
                 iframebuster: Option[Seq[String]] = None,
                 exp: Option[Int] = None,
-                ext: Option[Ext] = None
+                ext: Ext = None
               )
+{
+  require(!id.isEmpty)
+}
