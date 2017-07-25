@@ -1,4 +1,6 @@
-package com.clearafix.openrtb.model
+package com.clearafix.openrtb.utils
+
+import com.clearafix.openrtb.model.BidRequest
 
 object BidRequestTransformer {
   def toBidRequest(json:String) : BidRequest = ???
