@@ -1,4 +1,4 @@
-name := "bidder"
+name := "openrtb"
 
 version := "1.0"
 
